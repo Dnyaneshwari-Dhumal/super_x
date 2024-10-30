@@ -414,13 +414,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           //mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              "Yesterday",
-                               style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                                 ),
-                               ),
+                            
                             Column(
                               // mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,0 +1,1 @@
+ D:\\DnyaneshwariD\\Flutter\\project\\notification_screen\\.dart_tool\\flutter_build\\56913dda99c17d06aa2d4267663a706a\\native_assets.yaml: 
