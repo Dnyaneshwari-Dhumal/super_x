@@ -13,10 +13,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
   bool isReadSelected = false;
   bool isUnreadSelected = false;
   @override
-  Widget read() {
-    return 
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -71,7 +67,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 ),
                 GestureDetector(
                     onTap: () {
-                      
                       setState(() {
                         isAllSelected = false;
                         isReadSelected = true;
@@ -102,64 +97,62 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       ),
                     )),
                 GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        isAllSelected = false;
-                        isReadSelected = false;
-                        isUnreadSelected = true;
-                      });
-                    },
-                    child: Center(
-                      child: Container(
-                        height: 40,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                  onTap: () {
+                    setState(() {
+                      isAllSelected = false;
+                      isReadSelected = false;
+                      isUnreadSelected = true;
+                    });
+                  },
+                  child: Center(
+                    child: Container(
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: isUnreadSelected
+                              ? const Color.fromARGB(255, 7, 114, 10)
+                              : Colors.grey[200]),
+                      child: Center(
+                        child: Text(
+                          "Unread",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
                             color: isUnreadSelected
-                                ? const Color.fromARGB(255, 7, 114, 10)
-                                : Colors.grey[200]),
-                        child: Center(
-                          child: Text(
-                            "Unread",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                              color: isUnreadSelected
-                                  ? Colors.white
-                                  : const Color.fromARGB(255, 7, 114, 10),
-                            ),
+                                ? Colors.white
+                                : const Color.fromARGB(255, 7, 114, 10),
                           ),
                         ),
                       ),
                     ),
-                    ),
-
+                  ),
+                ),
               ],
             ),
             const SizedBox(
               height: 10,
             ),
-           
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child: Text(
-                    "Today",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            "Today",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                )
-              ],
-            ),
                     const SizedBox(
                       height: 15,
                     ),
@@ -392,7 +385,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
             const SizedBox(
               height: 10,
             ),
-            
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
@@ -400,6 +392,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   children: [
                     const SizedBox(
                       height: 15,
+                    ),
+                  const   Center(
+                      child: Text(
+                        "Yesterday",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                     Container(
                       height: 100,
@@ -414,7 +416,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           //mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            
                             Column(
                               // mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
